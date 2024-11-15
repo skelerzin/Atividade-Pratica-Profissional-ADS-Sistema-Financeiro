@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Controle de despesas</title>
+  </head>
+  <body>
+    <h1>Controle de despesas</h1>
+
+    <div class="container">
+      <h2>Saldo atual</h2>
+      
+      <h3 id="balance" class="balance">R$ 0.00</h3>
+
+      <div class="inc-exp-container">
+        <div>
+          <h4>Receitas</h4>
+          <p id="money-plus" class="money plus">+ R$0.00</p>
+        </div>
+
+        <div>
+          <h4>Despesas</h4>
+          <p id="money-minus" class="money minus">- R$0.00</p>  
+        </div>
+      </div>
+
+      <h3>Transações</h3>
+      
+      <ul id="transactions" class="transactions">
+       
+      </ul>
+
+      <h3>Adicionar transação</h3>
+      
+      <form id="form" name="transacao">
+        <div class="form-control">
+          <label for="text">Nome</label>
+          <input autofocus type="text" name="text" id="text" placeholder="Nome da transação" />
+        </div>
+
+        <div class="form-control">
+          <label for="amount">Valor <br />
+            <small>(negativo - despesas, positivo - receitas)</small>
+          </label>
+          <input type="number" name="amount" id="amount" placeholder="Valor da transação" />
+        </div>
+
+        <button class="btn">Adicionar</button>
+      </form>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
